@@ -118,7 +118,6 @@ async def criar_produto(produto: Produto):
 async def atualizar_produto(id_produto: int, produto: Produto):
     try:
         if id_produto in produtos_do_estoque:
-            print(produtos_do_estoque[id_produto])
             produtos_do_estoque[id_produto]["preco"] = produto.preco
             produtos_do_estoque[id_produto]["quantidade"] = produto.quantidade
             produtos_do_estoque[id_produto]
