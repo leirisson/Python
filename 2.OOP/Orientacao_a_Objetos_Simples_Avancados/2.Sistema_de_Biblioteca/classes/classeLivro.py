@@ -9,3 +9,4 @@ class Livro:
         if self.disponibilidade == True:
             return f"{self.titulo} | {self.autor} | {self.isbn} | disponivel".upper()
         return f"{self.titulo} | {self.autor} | {self.isbn} | emprestado".upper()
+    
