@@ -58,6 +58,12 @@ vendas = {
         "nome_produto":"Lápis preto",
         "quantidade_produto": 150,
         "valor_total": 75.00
+    },
+    "6": {
+        "nome_cliente":"Loise dos santos",
+        "nome_produto":"teclado",
+        "quantidade_produto": 200,
+        "valor_total": 2000
     }
 }
 
@@ -70,9 +76,17 @@ async def alo():
 async def pegar_todas_vendas():
     return  vendas
 
+@app.post("/vendas")
+async def criar_venda(venda: Venda):
+    vendas["7"] = venda
 
+# @app.patch("/vendas/{id_venda}")
+# async def editar_venda(id_venda: id):
+#     pass
 
-
+# @app.delete("/vendas/{id_venda}")
+# async def deletar_uma_venda(id_venda: int):
+#     pass
 
 if __name__ == "__main__":
     import uvicorn

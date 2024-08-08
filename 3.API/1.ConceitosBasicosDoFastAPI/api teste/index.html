@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Consulta de Vendas</h1>
-    <button id="fetch-vendas-btn">Buscar Vendas</button>
+    <button id="fetch-vendas-btn">Listar todas as Vendas</button>
 
     <div id="vendas-container"></div> <!-- Área para exibir as vendas -->
 
@@ -25,19 +25,19 @@
 
                 // Converte o objeto em uma lista (array)
                 const vendasArray = Object.values(response.data);
-                console.log(vendasArray)
-        
 
                 // Processa o array de vendas
                 vendasArray.forEach(venda => {
+                    console.log('Venda:', venda); // Verifique a estrutura de cada item no array
+
                     const vendaCard = document.createElement('div');
                     vendaCard.className = 'venda-card';
 
                     vendaCard.innerHTML = `
-                        <h3>${venda.produto}</h3>
-                        <p>ID: ${venda.id}</p>
-                        <p>Quantidade: ${venda.quantidade}</p>
-                        <p>Valor: R$ ${venda.valor}</p>
+                        <h3>Cliente: ${venda.nome_cliente || 'Nome não disponível'}</h3>
+                        <p>Produto: ${venda.nome_produto || 'Produto não disponível'}</p>
+                        <p>Quantidade: ${venda.quantidade_produto || 'Quantidade não disponível'}</p>
+                        <p>Valor Total: R$ ${venda.valor_total !== undefined ? venda.valor_total.toFixed(2) : 'Valor não disponível'}</p>
                     `;
 
                     vendasContainer.appendChild(vendaCard);
