@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+#fetch-vendas-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#fetch-vendas-btn:hover {
+    background-color: #0056b3;
+}
+
+#vendas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.venda-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.venda-card h3 {
+    margin: 0 0 10px 0;
+    color: #007bff;
+}
+
+.venda-card p {
+    margin: 5px 0;
+    color: #555;
+}
