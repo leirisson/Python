@@ -5,7 +5,6 @@ from mysql.connector import errorcode
 db_config = {
     'user': 'root',
     'password': '123456',
-    'port':'3307',
     'host': 'localhost',
     'database': 'gestao_veiculos_db'
 }

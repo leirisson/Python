@@ -9,4 +9,4 @@ if __name__ == "__main__":
     Conexao.connectar_db()
     Conexao.setup_database("moto")
     Conexao.fechar_conexao()
-    Conexao.criar_veiculo("moto","honda-cb","honda","azul",2021)
+    # Conexao.criar_veiculo("moto","honda-cb","honda","azul",2021)
