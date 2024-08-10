@@ -1,10 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+# postgresql://postgres:123456@localhost:5432/cinema
+# mysql+pymysql://root:123456@localhost:3307/cinema
 
 class DBConnect:
     def __init__(self) -> None:
-        self.__connection_string = "mysql+pymysql://root:123456@localhost:3307/cinema"
+        self.__connection_string = "postgresql://postgres:123456@localhost:5432/cinema"
         self.__engine = self.__create_database_engine()
         self.session = None
 

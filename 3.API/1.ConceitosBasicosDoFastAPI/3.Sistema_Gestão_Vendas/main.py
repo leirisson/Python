@@ -21,6 +21,21 @@ from models.modelVenda import Venda
 app = FastAPI()
 
 
+
+from sqlalchemy import create_engine
+from sqlalchemy import text
+
+engine = create_engine("postgresql://postgres:123456@localhost:5432/cadastro")
+conexao  = engine.connect()
+comando_sql = text("SELECT * FROM cadastros")
+
+response = conexao.execute(comando_sql)
+
+lista_cadastro = []
+
+
+
+
 vendas = {
     1: {
         "nome_cliente":"Leirisson Souza",

@@ -7,7 +7,7 @@ from sqlalchemy import Column, String, Integer
 
 
 # criando configurações
-engine  = create_engine("mysql+pymysql://root:123456@localhost:3307/cinema")
+engine = create_engine("postgresql://postgres:123456@localhost:5432/cinema")
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()
