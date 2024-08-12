@@ -10,7 +10,7 @@ async def create_tables () -> None:
     async with engine.begin() as conexao:
         await conexao.run_sync(settings.BD_base_model.metadata.drop_all)
         await conexao.run_sync(settings.BD_base_model.metadata.create_all)
-        
+
     print("Tebelas criadas com sucesso.")
 
 
