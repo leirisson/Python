@@ -19,8 +19,21 @@ from models.model_Livro import Livro
 from models.model_Jornal import Jornal
 from models.model_Revista import Revista
 
-from fastapi import FastAPI
+from fastapi import FastAPI 
 
+from sqlalchemy import create_engine
+from sqlalchemy import text
+
+engine = create_engine("postgresql://postgres:123456@localhost:5432/cadastro")
+conexao  = engine.connect()
+comando_sql = text("SELECT * FROM cadastros")
+
+response = conexao.execute(comando_sql)
+
+lista_cadastro = []
+
+for cadstro in response:
+    lista_cadastro.append(cadstro)
 
 dados_biblioteca =[
     {'id': 1, 'titulo': 'Python para Todos', 'autor': 'Autor Desconhecido', 'ano_publicacao': 2023, 'numero_paginas': 350, 'editora': 'Editora ABC'},
@@ -47,7 +60,7 @@ async def index():
 
 @app.get("/publicacoes")
 async def get_dados_biblioteca():
-    return dados_biblioteca
+    return lista_cadastro
 
 if __name__ == "__main__":
     import uvicorn 

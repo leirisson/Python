@@ -1,7 +1,9 @@
 from sqlalchemy import create_engine # type: ignore
 from sqlalchemy import text
 
-engine = create_engine("mysql+pymysql://root:123456@localhost:3307/cinema")
+# engine = create_engine("mysql+pymysql://root:123456@localhost:3307/cinema")
+engine = create_engine("postgresql://postgres:123456@localhost:5432/cinema")
+
 
 conexao = engine.connect()
 
