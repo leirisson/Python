@@ -23,4 +23,3 @@ print(lista_de_filmes)
 conexao.close()
 print("conexao fechada")
 
-   
