@@ -1,5 +1,5 @@
 from configs.configs import settings
-from sqlalchemy import Column, String, Float, Integer # type: ignore
+from sqlalchemy import Column, String, Integer 
 
 
 class Model_venda(settings.DB_BASE_MODEL):
@@ -11,5 +11,3 @@ class Model_venda(settings.DB_BASE_MODEL):
     quantidade_produto = Column(Integer)
     
 
-    class Config:
-        orm_mode = True

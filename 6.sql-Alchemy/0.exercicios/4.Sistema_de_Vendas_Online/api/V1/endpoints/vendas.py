@@ -61,7 +61,7 @@ async def put_venda(id_venda: int, venda: Schemavendas, db: AsyncSession = Depen
         if venda_update:
             
             venda_update.nome_cliente = venda.nome_cliente
-            venda_update.nome_prosuto = venda.nome_produto
+            venda_update.nome_produto = venda.nome_produto
             venda_update.quantidade_produto = venda.quantidade_produto
 
             await session.commit()

@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession # type: ignore
 
 from configs.dataBase import Session
 
-async def get_session() -> Generator:
+async def get_session() -> Generator: # type: ignore
     session: AsyncSession = Session()
     try:
         yield session
