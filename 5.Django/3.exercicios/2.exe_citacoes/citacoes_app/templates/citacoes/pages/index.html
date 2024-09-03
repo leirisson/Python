@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% include "citacoes/partials/head.html" %}
 <body>
-    
+    <div class="citacoes">
+        <p class="text">clique no botão para gera uma citação ...</p>
+        <p class="autor"></p>
+        <button class="button" id="citacaoBtn">Gerar citação</button>
+    </div>
 </body>
+{% include "citacoes/partials/scripts_js.html" %}
 </html>

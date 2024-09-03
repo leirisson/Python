@@ -1,0 +1,167 @@
+<script>
+    const quote = [
+        {
+            quote: "São as nossas escolhas, Harry, que mostram o que realmente somos, muito mais do que nossas habilidades.",
+            author: "J.K. Rowling",
+            book: "Harry Potter e a Câmara Secreta"
+        },
+        {
+            quote: "Tudo o que temos de decidir é o que fazer com o tempo que nos é dado.",
+            author: "J.R.R. Tolkien",
+            book: "O Senhor dos Anéis: A Sociedade do Anel"
+        },
+        {
+            quote: "Não vale a pena viver sonhando e se esquecer de viver.",
+            author: "J.K. Rowling",
+            book: "Harry Potter e a Pedra Filosofal"
+        },
+        {
+            quote: "O único limite para a nossa realização de amanhã são as nossas dúvidas de hoje.",
+            author: "Franklin D. Roosevelt",
+            book: "Olhando para Frente"
+        },
+        {
+            quote: "No final, não nos lembraremos das palavras dos nossos inimigos, mas do silêncio dos nossos amigos.",
+            author: "Martin Luther King Jr.",
+            book: "Por Que Não Podemos Esperar"
+        },
+        {
+            quote: "O propósito da vida não é ser feliz. É ser útil, ser honrado, ser compassivo, fazer com que tenha alguma diferença por ter vivido e vivido bem.",
+            author: "Ralph Waldo Emerson",
+            book: "Ensaios: Primeira Série"
+        },
+        {
+            quote: "Não são nossas habilidades que mostram o que realmente somos... são nossas escolhas.",
+            author: "J.K. Rowling",
+            book: "Harry Potter e a Câmara Secreta"
+        },
+        {
+            quote: "Não há maior agonia do que carregar uma história não contada dentro de você.",
+            author: "Maya Angelou",
+            book: "Eu Sei Por Que o Pássaro Canta na Gaiola"
+        },
+        {
+            quote: "Nunca é tarde demais para ser o que você poderia ter sido.",
+            author: "George Eliot",
+            book: "Middlemarch"
+        },
+        {
+            quote: "Ser você mesmo em um mundo que está constantemente tentando fazer de você outra coisa é a maior realização.",
+            author: "Ralph Waldo Emerson",
+            book: "Auto-Reliance and Other Essays"
+        },
+        {
+            quote: "A única maneira de fazer um ótimo trabalho é amar o que você faz.",
+            author: "Steve Jobs",
+            book: "Steve Jobs (biografia por Walter Isaacson)"
+        },
+        {
+            quote: "Uma vida não examinada não vale a pena ser vivida.",
+            author: "Sócrates",
+            book: "Apologia"
+        },
+        {
+            quote: "Viver é a coisa mais rara do mundo. A maioria das pessoas apenas existe.",
+            author: "Oscar Wilde",
+            book: "A Alma do Homem sob o Socialismo"
+        },
+        {
+            quote: "Em três palavras posso resumir tudo o que aprendi sobre a vida: ela continua.",
+            author: "Robert Frost",
+            book: "New Hampshire"
+        },
+        {
+            quote: "Todos nós estamos na sarjeta, mas alguns de nós estão olhando para as estrelas.",
+            author: "Oscar Wilde",
+            book: "O Leque de Lady Windermere"
+        },
+        {
+            quote: "O que está atrás de nós e o que está à nossa frente são coisas insignificantes comparadas ao que está dentro de nós.",
+            author: "Ralph Waldo Emerson",
+            book: "Collected Works of Ralph Waldo Emerson"
+        },
+        {
+            quote: "Não vá onde o caminho pode levar; vá em vez disso onde não há caminho e deixe uma trilha.",
+            author: "Ralph Waldo Emerson",
+            book: "Ensaios: Segunda Série"
+        },
+        {
+            quote: "Você deve ser a mudança que deseja ver no mundo.",
+            author: "Mahatma Gandhi",
+            book: "Minha Vida e Minhas Experiências com a Verdade"
+        },
+        {
+            quote: "A única coisa necessária para o triunfo do mal é que os homens bons não façam nada.",
+            author: "Edmund Burke",
+            book: "Pensamentos sobre as Causas do Descontentamento Atual"
+        },
+        {
+            quote: "Aquilo que não nos mata nos torna mais fortes.",
+            author: "Friedrich Nietzsche",
+            book: "Crepúsculo dos Ídolos"
+        },
+        {
+            quote: "Não está nas estrelas segurar o nosso destino, mas em nós mesmos.",
+            author: "William Shakespeare",
+            book: "Júlio César"
+        },
+        {
+            quote: "A melhor maneira de encontrar a si mesmo é se perder no serviço aos outros.",
+            author: "Mahatma Gandhi",
+            book: "Minha Vida e Minhas Experiências com a Verdade"
+        },
+        {
+            quote: "A felicidade não é algo pronto. Ela vem de suas próprias ações.",
+            author: "Dalai Lama",
+            book: "A Arte da Felicidade"
+        },
+        {
+            quote: "Se você disser a verdade, não precisa se lembrar de nada.",
+            author: "Mark Twain",
+            book: "Following the Equator"
+        },
+        {
+            quote: "O sucesso não é final, o fracasso não é fatal: é a coragem de continuar que conta.",
+            author: "Winston Churchill",
+            book: "Never Give In! The Best of Winston Churchill's Speeches"
+        },
+        {
+            quote: "É melhor ser temido do que amado, se você não pode ser ambos.",
+            author: "Niccolò Machiavelli",
+            book: "O Príncipe"
+        },
+        {
+            quote: "A maior glória em viver não está em nunca cair, mas em se levantar a cada vez que caímos.",
+            author: "Nelson Mandela",
+            book: "Long Walk to Freedom"
+        },
+        {
+            quote: "A imaginação é mais importante do que o conhecimento. Pois o conhecimento é limitado, enquanto a imaginação abraça o mundo inteiro.",
+            author: "Albert Einstein",
+            book: "Cosmic Religion: With Other Opinions and Aphorisms"
+        },
+        {
+            quote: "Não importa o quão devagar você vá, desde que você não pare.",
+            author: "Confúcio",
+            book: "Os Analectos de Confúcio"
+        },
+        {
+            quote: "A vida é o que acontece enquanto você está ocupado fazendo outros planos.",
+            author: "John Lennon",
+            book: "Beautiful Boy: A Father's Journey Through His Son's Addiction"
+        }
+    ]
+
+    const gerarCitacaoBtn = document.querySelector("#citacaoBtn")
+    const citacaoTexto = document.querySelector(".text")
+    const citacaoAutor = document.querySelector(".autor")
+
+    function getCitacao() {
+        const index = Math.floor(Math.random() * quote.length);
+
+        citacaoTexto.textContent = quote[index].quote
+        citacaoAutor.textContent = quote[index].author
+    }
+
+    gerarCitacaoBtn.addEventListener("click", getCitacao)
+</script>
