@@ -1,0 +1,4 @@
+# CHAVE_API = "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"
+
+
+# #  =>    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
