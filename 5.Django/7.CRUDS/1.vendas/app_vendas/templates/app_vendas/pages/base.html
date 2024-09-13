@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app_vendas/css/main.css' %}">
+    <title>{% block titulo_aba %}{% endblock  %}</title>
+</head>
+<body>
+    {% block conteudo %}
+    {% endblock  %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "app_vendas/pages/base.html" %}
+
+{% block conteudo %}
+<ul>
+    {% for cliente in clientes %}
+      <li>{{cliente.nome}}</li>
+    {% endfor %}  
+    </ul>
+{% endblock  %}
+
+
+

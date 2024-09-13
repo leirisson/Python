@@ -1,0 +1,26 @@
+{% extends "app_vendas/pages/base.html" %}
+
+{% block titulo_aba %}Cadastro{% endblock  %}
+
+{% block conteudo %}
+<form action="{% url "pessoas" %}" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome"  name="nome" placeholder="Digite seu nome...">
+    </div>
+    <div>
+        <label for="nome">Sobre nome</label>
+        <input type="text" name="sobre_nome" id="sobre_nome" placeholder="Digite seu sobre nome...">
+    </div>
+    <div>
+        <label for="nome">cpf</label>
+        <input type="text"  id="cpf" name="cpf" placeholder="Digite seu nome...">
+    </div>
+    <div>
+        <label for="nome">e-mail</label>
+        <input type="text" id="email" name="email" placeholder="Digite seu nome...">
+    </div>
+    <button type="submit">Cadastrar</button>
+</form>
+{% endblock  %}
