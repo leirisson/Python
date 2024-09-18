@@ -1,0 +1,32 @@
+{% extends "app_gestao_de_livros/pages/base.html" %}
+
+{% block titulo %} Cadastro Livro {% endblock %}
+
+{% block conteudo %}
+
+<h1 style="text-align: center; margin-top: 2rem;">Cadastro de livros</h1>
+<div class="container">
+    <form action="{% url 'salvar' %}" method="post">
+        {% csrf_token %}
+        <div class="mb-2">
+            <label  class="label-form" for="titulo">Titulo</label>
+            <input class="form-control" id="titulo" name="titulo" type="text" >
+        </div>
+        <div class="mb-2">
+            <label  class="label-form" for="autor">Autor</label>
+            <input class="form-control" id="autor" name="autor" type="text">
+        </div>
+        <div class="mb-2">
+            <label class="label-form" for="qtd_pagina">Quantidade de paginas</label>
+            <input class="form-control" id="qtd_pagina" name="qtd_pagina" type="text">
+        </div>
+        <div class="mb-2">
+            <label  class="label-form" for="data_publicacao">Ano de publicação</label>
+            <input class="form-control" id="data_publicacao" name="data_publicacao" type="date">
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar Livro</button>
+    </form>
+
+</div>
+
+{% endblock  %}

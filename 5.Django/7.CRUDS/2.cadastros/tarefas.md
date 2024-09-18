@@ -6,6 +6,7 @@ Crie um sistema que permita a gestão de uma biblioteca de livros. O sistema dev
 - **Informações** : 
     - **título**,
     - **autor**, 
+    - **quantidade de paginas**
     - **ano_de_publicação_e_categoria.**
 - **Ler** (listar) todos os livros cadastrados.
 - **Atualizar** informações de um livro existente.
