@@ -1,0 +1,11 @@
+{% extends "posts_app/pages/base.html" %}
+
+{% block title %}Detalhes da Postagem{% endblock  %}
+
+{% block content %}
+    <h1>Detalhe do post: {{post.title}}</h1>
+    <p>{{post.cretae_at}}</p>
+    <img src="{{post.image.url}}" width="300" alt="{{post.title}}">
+    <p>{{post.descriptions}}</p>
+
+{% endblock  %}

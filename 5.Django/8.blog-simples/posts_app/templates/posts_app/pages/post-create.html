@@ -1,0 +1,15 @@
+{% extends "posts_app/pages/base.html" %}
+
+{% block title %}Criar novo post{% endblock  %}
+
+{% block content %}
+
+        <form action="{% if request.method == 'POST' %} {% url 'post-create' %}{% endif %}"
+        method="post"
+            enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Cadastrar</button>
+        </form>
+
+{% endblock  %}

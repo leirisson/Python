@@ -1,0 +1,15 @@
+{% extends "posts_app/pages/base.html" %}
+
+{% block content %}
+    <h1>Todos os POSTS</h1>
+
+    <a href="{% url 'post-create' %}">Criar um post</a>
+    {% comment %} todos os posts aqui  {% endcomment %}
+    {% for post in posts  %}
+        <img src="{{post.image.url}}" width="150px" alt="{{post.title}}">
+        <a href="{% url 'detalhes' post.id %}">detalhes do post</a>
+        <a href="{% url 'post-update' post.id %}">EDITAR POST</a>
+        <p>{{post.title}}</p>
+   
+    {% endfor %}
+{% endblock  %}
