@@ -1,0 +1,80 @@
+
+Aqui estão quatro exercícios com CRUD utilizando Django, baseados em cenários reais de **5W2H**, **barbearia**, **consultório odontológico** e **e-commerce**.
+
+---
+
+### 1. **Sistema 5W2H**
+   **Objetivo:** Criar um sistema para gerenciar estratégias de planejamento utilizando a metodologia **5W2H** (What, Why, Where, When, Who, How, How much).
+   
+   **Requisitos:**
+   - Criar um modelo `Strategy` com os campos:
+     - `what`: O que será feito.
+     - `why`: Por que será feito.
+     - `where`: Onde será feito.
+     - `when`: Quando será feito.
+     - `who`: Quem irá fazer.
+     - `how`: Como será feito.
+     - `how_much`: Quanto vai custar.
+   - Implementar views para:
+     - Criar uma nova estratégia.
+     - Listar todas as estratégias.
+     - Atualizar uma estratégia existente.
+     - Excluir uma estratégia.
+   - Adicionar a funcionalidade de filtrar as estratégias por data (`when`) e responsável (`who`).
+
+---
+
+### 2. **Sistema de Gerenciamento de Barbearia**
+   **Objetivo:** Desenvolver um sistema para agendamento e gerenciamento de clientes e serviços de uma barbearia.
+   
+   **Requisitos:**
+   - Criar um modelo `Service` com os campos: `name`, `description`, `price`, `duration` (duração do serviço).
+   - Criar um modelo `Client` com os campos: `name`, `phone`, `email`.
+   - Criar um modelo `Appointment` para agendamentos, com os campos: `client`, `service`, `date` e `time`.
+   - Implementar views para:
+     - Criar um novo serviço.
+     - Criar um novo cliente.
+     - Criar um novo agendamento.
+     - Listar todos os agendamentos e filtrar por data.
+     - Atualizar dados de serviços, clientes e agendamentos.
+     - Excluir um agendamento.
+   - Implementar um sistema de notificação simples (via terminal) para lembrar os clientes dos agendamentos.
+
+---
+
+### 3. **Sistema de Gerenciamento de Consultório Odontológico**
+   **Objetivo:** Criar um sistema para gerenciar pacientes, tratamentos e consultas de um consultório odontológico.
+
+   **Requisitos:**
+   - Criar um modelo `Patient` com os campos: `name`, `birth_date`, `phone`, `email`, `address`.
+   - Criar um modelo `Treatment` com os campos: `name`, `description`, `price`, `duration`.
+   - Criar um modelo `Appointment` com os campos: `patient`, `treatment`, `dentist` (ligado ao modelo `User`), `date`, `time`, `status` (confirmado ou pendente).
+   - Implementar views para:
+     - Criar um novo paciente.
+     - Agendar um novo tratamento para o paciente.
+     - Listar todas as consultas agendadas, com filtros por data e status.
+     - Atualizar informações de pacientes e consultas.
+     - Excluir uma consulta.
+   - Adicionar validações para evitar agendamento duplicado no mesmo horário para o mesmo dentista.
+
+---
+
+### 4. **Sistema E-commerce**
+   **Objetivo:** Desenvolver um sistema de e-commerce para gerenciar produtos, pedidos e clientes.
+
+   **Requisitos:**
+   - Criar um modelo `Product` com os campos: `name`, `description`, `price`, `stock`.
+   - Criar um modelo `Customer` com os campos: `name`, `email`, `phone`, `address`.
+   - Criar um modelo `Order` com os campos: `customer`, `product`, `quantity`, `order_date`, `status` (pendente, enviado, entregue).
+   - Implementar views para:
+     - Criar um novo produto e cliente.
+     - Listar todos os produtos disponíveis.
+     - Criar um novo pedido.
+     - Atualizar o status de um pedido.
+     - Excluir um pedido.
+   - Adicionar validação para verificar o estoque ao criar um pedido, evitando vender mais do que o disponível.
+   - Implementar uma página de checkout simples, onde o cliente pode ver o total da compra antes de finalizar o pedido.
+
+---
+
+Esses exercícios cobrem operações completas de CRUD em diferentes cenários do mundo real, permitindo a prática de habilidades em modelagem de dados, criação de views e manipulação de formulários em Django.
